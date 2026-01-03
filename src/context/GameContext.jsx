@@ -24,7 +24,7 @@ export const GameProvider = ({ children }) => {
         setPlayers(players.map(p => p.id === id ? { ...p, name } : p));
     };
 
-    const assignRoles = () => {
+    const assignRoles = (categoryOverride = null) => {
         // Reset roles
         const newPlayers = players.map(p => ({ ...p, isImpostor: false }));
 
@@ -41,8 +41,9 @@ export const GameProvider = ({ children }) => {
         setPlayers(newPlayers);
 
         // Select secret word
-        if (selectedCategory) {
-            const words = selectedCategory.words;
+        const categoryToUse = categoryOverride || selectedCategory;
+        if (categoryToUse) {
+            const words = categoryToUse.words;
             const randomWord = words[Math.floor(Math.random() * words.length)];
             setSecretWord(randomWord);
         }

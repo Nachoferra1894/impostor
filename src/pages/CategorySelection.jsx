@@ -10,7 +10,7 @@ const CategorySelection = () => {
 
     const handleSelectCategory = (category) => {
         setSelectedCategory(category);
-        assignRoles(); // Triggers random assignment
+        assignRoles(category); // Pass category explicitly
         navigate('/reveal');
     };
 

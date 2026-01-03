@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGame } from '../context/GameContext';
-import { Plus, X, User } from 'lucide-react'; // Needs lucide-react installed in package.json
+import { Plus, X, User, Wand2 } from 'lucide-react'; // Needs lucide-react installed in package.json
 
 const PlayerSetup = () => {
     const navigate = useNavigate();
-    const { players, addPlayer, removePlayer, updatePlayerName, impostorCount, setImpostorCount } = useGame();
+    const { players, addPlayer, removePlayer, updatePlayerName, impostorCount, setImpostorCount, setPlayers } = useGame();
     const [newPlayerName, setNewPlayerName] = useState('');
 
     // Auto-add 3 empty slots if empty on mount
@@ -23,6 +23,16 @@ const PlayerSetup = () => {
         if (players.length < 20) {
             addPlayer(`Jugador ${players.length + 1}`);
         }
+    };
+
+    const handleMagicPopulate = () => {
+        const magicNames = ['Enzo', 'Mateo', 'Mama', 'Papa', 'Lara', 'Nacho'];
+        const newPlayers = magicNames.map((name, index) => ({
+            id: Date.now() + index, // Ensure unique IDs
+            name: name,
+            isImpostor: false
+        }));
+        setPlayers(newPlayers);
     };
 
     const handleContinue = () => {
@@ -74,9 +84,27 @@ const PlayerSetup = () => {
             </div>
 
             <div style={{ flex: 1, overflowY: 'auto', marginBottom: '1.5rem', paddingBottom: '1rem' }}>
-                <h3 style={{ marginBottom: '1rem', color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    Jugadores ({players.length})
-                </h3>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                    <h3 style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                        Jugadores ({players.length})
+                    </h3>
+                    <button
+                        onClick={handleMagicPopulate}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: 'var(--primary-glow)',
+                            cursor: 'pointer',
+                            padding: '0.5rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.5rem'
+                        }}
+                        title="Autocompletar jugadores"
+                    >
+                        <Wand2 size={20} />
+                    </button>
+                </div>
 
                 <AnimatePresence>
                     {players.map((player, index) => (
