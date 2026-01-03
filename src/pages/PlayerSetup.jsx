@@ -122,6 +122,34 @@ const PlayerSetup = () => {
                                 border: '1px solid rgba(255,255,255,0.05)'
                             }}
                         >
+                            <div style={{ display: 'flex', flexDirection: 'column', marginRight: '0.5rem' }}>
+                                <button
+                                    onClick={() => {
+                                        if (index > 0) {
+                                            const newPlayers = [...players];
+                                            [newPlayers[index - 1], newPlayers[index]] = [newPlayers[index], newPlayers[index - 1]];
+                                            setPlayers(newPlayers);
+                                        }
+                                    }}
+                                    disabled={index === 0}
+                                    style={{ background: 'none', border: 'none', color: index === 0 ? 'var(--text-muted)' : 'white', cursor: index === 0 ? 'default' : 'pointer', padding: 0, opacity: index === 0 ? 0.3 : 1 }}
+                                >
+                                    ▲
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        if (index < players.length - 1) {
+                                            const newPlayers = [...players];
+                                            [newPlayers[index + 1], newPlayers[index]] = [newPlayers[index], newPlayers[index + 1]];
+                                            setPlayers(newPlayers);
+                                        }
+                                    }}
+                                    disabled={index === players.length - 1}
+                                    style={{ background: 'none', border: 'none', color: index === players.length - 1 ? 'var(--text-muted)' : 'white', cursor: index === players.length - 1 ? 'default' : 'pointer', padding: 0, opacity: index === players.length - 1 ? 0.3 : 1 }}
+                                >
+                                    ▼
+                                </button>
+                            </div>
                             <User size={20} color="var(--primary-glow)" style={{ marginRight: '1rem' }} />
                             <input
                                 type="text"
