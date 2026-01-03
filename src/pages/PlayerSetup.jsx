@@ -106,66 +106,81 @@ const PlayerSetup = () => {
                     </button>
                 </div>
 
-                <Reorder.Group axis="y" values={players} onReorder={setPlayers} style={{ listStyle: 'none', padding: 0 }}>
-                    <AnimatePresence>
-                        {players.map((player) => (
-                            <Reorder.Item
-                                key={player.id}
-                                value={player}
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                whileDrag={{ scale: 1.02 }}
-                                className="glass-panel"
+                <AnimatePresence>
+                    {players.map((player, index) => (
+                        <motion.div
+                            key={player.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            className="glass-panel"
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                padding: '0.75rem 1rem',
+                                marginBottom: '0.75rem',
+                                border: '1px solid rgba(255,255,255,0.05)'
+                            }}
+                        >
+                            <div style={{ display: 'flex', flexDirection: 'column', marginRight: '0.5rem' }}>
+                                <button
+                                    onClick={() => {
+                                        if (index > 0) {
+                                            const newPlayers = [...players];
+                                            [newPlayers[index - 1], newPlayers[index]] = [newPlayers[index], newPlayers[index - 1]];
+                                            setPlayers(newPlayers);
+                                        }
+                                    }}
+                                    disabled={index === 0}
+                                    style={{ background: 'none', border: 'none', color: index === 0 ? 'var(--text-muted)' : 'white', cursor: index === 0 ? 'default' : 'pointer', padding: 0, opacity: index === 0 ? 0.3 : 1 }}
+                                >
+                                    ▲
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        if (index < players.length - 1) {
+                                            const newPlayers = [...players];
+                                            [newPlayers[index + 1], newPlayers[index]] = [newPlayers[index], newPlayers[index + 1]];
+                                            setPlayers(newPlayers);
+                                        }
+                                    }}
+                                    disabled={index === players.length - 1}
+                                    style={{ background: 'none', border: 'none', color: index === players.length - 1 ? 'var(--text-muted)' : 'white', cursor: index === players.length - 1 ? 'default' : 'pointer', padding: 0, opacity: index === players.length - 1 ? 0.3 : 1 }}
+                                >
+                                    ▼
+                                </button>
+                            </div>
+                            <User size={20} color="var(--primary-glow)" style={{ marginRight: '1rem' }} />
+                            <input
+                                type="text"
+                                value={player.name}
+                                onChange={(e) => updatePlayerName(player.id, e.target.value)}
                                 style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    padding: '0.75rem 1rem',
-                                    marginBottom: '0.75rem',
-                                    border: '1px solid rgba(255,255,255,0.05)',
-                                    cursor: 'grab',
-                                    userSelect: 'none'
+                                    background: 'transparent',
+                                    border: 'none',
+                                    padding: 0,
+                                    flex: 1,
+                                    fontSize: '1.1rem',
+                                    color: 'white'
                                 }}
-                            >
-                                <div style={{ marginRight: '1rem', cursor: 'grab', color: 'var(--text-muted)' }}>
-                                    <GripVertical size={20} />
-                                </div>
-                                <User size={20} color="var(--primary-glow)" style={{ marginRight: '1rem' }} />
-                                <input
-                                    type="text"
-                                    value={player.name}
-                                    onChange={(e) => updatePlayerName(player.id, e.target.value)}
-                                    // Prevent drag when typing
-                                    onPointerDown={(e) => e.stopPropagation()}
+                            />
+                            {players.length > 2 && (
+                                <button
+                                    onClick={() => removePlayer(player.id)}
                                     style={{
                                         background: 'transparent',
                                         border: 'none',
-                                        padding: 0,
-                                        flex: 1,
-                                        fontSize: '1.1rem',
-                                        color: 'white'
+                                        color: 'var(--text-muted)',
+                                        cursor: 'pointer',
+                                        padding: '0.5rem'
                                     }}
-                                />
-                                {players.length > 2 && (
-                                    <button
-                                        onClick={() => removePlayer(player.id)}
-                                        // Prevent drag when clicking remove
-                                        onPointerDown={(e) => e.stopPropagation()}
-                                        style={{
-                                            background: 'transparent',
-                                            border: 'none',
-                                            color: 'var(--text-muted)',
-                                            cursor: 'pointer',
-                                            padding: '0.5rem'
-                                        }}
-                                    >
-                                        <X size={20} />
-                                    </button>
-                                )}
-                            </Reorder.Item>
-                        ))}
-                    </AnimatePresence>
-                </Reorder.Group>
+                                >
+                                    <X size={20} />
+                                </button>
+                            )}
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
 
                 {players.length < 20 && (
                     <button
