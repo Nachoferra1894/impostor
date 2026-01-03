@@ -292,15 +292,15 @@ export const CATEGORIES = [
     id: 'animated_movies',
     name: 'Películas Animadas',
     words: [
-      'El Rey León', 'Shrek', 'Toy Story', 'Buscando a Nemo', 'La Era de Hielo', 'Madagascar', 'Kung Fu Panda', 'Gru, Mi Villano Favorito', 'Minions', 'Intensamente',
-      'Coco', 'Frozen', 'Los Increíbles', 'Monsters Inc.', 'Cars', 'Ratatouille', 'Up', 'WALL-E', 'Cómo Entrenar a tu Dragón', 'El Gato con Botas',
-      'Sing', 'La Vida Secreta de tus Mascotas', 'Hotel Transylvania', 'Spider-Man: Un Nuevo Universo', 'Super Mario Bros. La Película', 'Encanto', 'Moana', 'Zootopia', 'Enredados', 'Valiente',
-      'Aladdín', 'La Sirenita', 'La Bella y la Bestia', 'Mulan', 'Pocahontas', 'Hércules', 'Tarzán', 'El Jorobado de Notre Dame', 'Lilo y Stitch', 'El Planeta del Tesoro',
-      'Spirit', 'El Camino hacia El Dorado', 'Simbad', 'El Príncipe de Egipto', 'Pollitos en Fuga', 'Wallace y Gromit', 'Megamente', 'El Origen de los Guardianes', 'Los Croods', 'Trolls',
-      'Rio', 'Ferdinand', 'Robots', 'Horton y el Mundo de los Quien', 'Lorax', 'El Grinch', 'Bob Esponja: La Película', 'Los Simpson: La Película', 'Lluvia de Hamburguesas', 'Rango',
-      'Klaus', 'Red', 'Soul', 'Luca', 'Lightyear', 'Elementos', 'Un Gran Dinosaurio', 'Unidos', 'Wifi Ralph', 'Grandes Héroes',
-      'Bolt', 'La Familia del Futuro', 'Chicken Little', 'Tierra de Osos', 'Vacas Vaqueras', 'Atlantis', 'Las Locuras del Emperador', 'Dinosaurio', 'Fantasía', 'Pinocho',
-      'Dumbo', 'Bambi', 'Peter Pan', 'Alicia en el País de las Maravillas', 'La Dama y el Vagabundo', '101 Dálmatas', 'El Libro de la Selva', 'Los Aristogatos', 'Robin Hood', 'Winnie the Pooh'
+      'Shrek', 'Toy Story', 'Buscando a Nemo', 'La Era de Hielo', 'Madagascar', 'Kung Fu Panda', 'Gru, Mi Villano Favorito', 'Minions', 'Intensamente', 'Coco',
+      'Frozen', 'Los Increíbles', 'Monsters Inc.', 'Cars', 'Ratatouille', 'Up', 'WALL-E', 'Cómo Entrenar a tu Dragón', 'El Gato con Botas', 'El Gato con Botas: El Último Deseo',
+      'Sing: Ven y Canta', 'La Vida Secreta de tus Mascotas', 'Hotel Transylvania', 'Spider-Man: Un Nuevo Universo', 'Spider-Man: A través del Spider-Verso', 'Super Mario Bros. La Película', 'Encanto', 'Moana', 'Zootopia', 'Enredados',
+      'Valiente', 'Ralph el Demoledor', 'Wifi Ralph', 'Grandes Héroes', 'La Princesa y el Sapo', 'Bolt', 'La Familia del Futuro', 'Lluvia de Hamburguesas', 'Megamente', 'Monsters University',
+      'Los Croods', 'Trolls', 'Rio', 'Un Jefe en Pañales', 'Los Tipos Malos', 'Red', 'Soul', 'Luca', 'Lightyear', 'Elementos',
+      'Un Gran Dinosaurio', 'Unidos', 'Raya y el Último Dragón', 'Wish: El Poder de los Deseos', 'Strange World', 'Tortugas Ninja: Caos Mutante', 'Paw Patrol: La Película', 'Sonic la Película', 'Detective Pikachu', 'La Gran Aventura Lego',
+      'Batman Lego', 'Angry Birds', 'Emoji: La Película', 'Pie Pequeño', 'Abominable', 'Ferdinand', 'El Lorax', 'El Grinch (2018)', 'Bob Esponja: La Película', 'Los Simpson: La Película',
+      'Rango', 'Klaus', 'El Origen de los Guardianes', 'Pollitos en Fuga', 'Vecinos Invasores', 'Espanta Tiburones', 'Bee Movie', 'Coraline', 'El Cadáver de la Novia', 'Monster House',
+      'Happy Feet', 'Surf\'s Up: Reyes de las Olas', 'Planeta 51', 'Las Aventuras de Tintín', 'Arthur Christmas', 'ParaNorman', 'Frankenweenie', 'Hotel Transylvania 2', 'Hotel Transylvania 3', 'La Era de Hielo 2'
     ]
   },
   {
