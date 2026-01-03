@@ -85,8 +85,8 @@ export const CATEGORIES = [
     words: [
       'Titanic', 'Avatar', 'El Padrino', 'Pulp Fiction', 'Forrest Gump', 'Star Wars', 'Jurassic Park', 'El Señor de los Anillos', 'Harry Potter', 'Matrix',
       'Inception', 'Interstellar', 'Gladiador', 'Corazón Valiente', 'Rocky', 'Terminator', 'Volver al Futuro', 'Indiana Jones', 'E.T.', 'Tiburón',
-      'El Rey León', 'Toy Story', 'Buscando a Nemo', 'Shrek', 'Frozen', 'Coco', 'Up', 'Inside Out', 'Los Vengadores', 'Spider-Man',
-      'Batman', 'Superman', 'Iron Man', 'Capitán América', 'Thor', 'Hulk', 'Black Panther', 'Wonder Woman', 'Joker', 'Deadpool',
+      'El Rey León', 'Toy Story', 'Buscando a Nemo', 'Shrek', 'Frozen', 'Coco', 'Up', 'Intensamente', 'Los Vengadores', 'Spider-Man',
+      'Batman', 'Superman', 'Iron Man', 'Capitán América', 'Thor', 'Hulk', 'Pantera Negra', 'Mujer Maravilla', 'Joker', 'Deadpool',
       'La La Land', 'Bohemian Rhapsody', 'A Star Is Born', 'Grease', 'Dirty Dancing', 'Mamma Mia!', 'Chicago', 'Moulin Rouge', 'Los Miserables', 'El Fantasma de la Ópera',
       'Psicosis', 'El Resplandor', 'El Exorcista', 'It', 'Scream', 'Halloween', 'Viernes 13', 'Pesadilla en la Calle Elm', 'Saw', 'El Conjuro',
       'El Silencio de los Inocentes', 'Se7en', 'Fight Club', 'Los Sospechosos de Siempre', 'Perros de la Calle', 'Goodfellas', 'Scarface', 'Casino', 'The Irishma', 'Once Upon a Time in Hollywood',
@@ -265,46 +265,68 @@ export const CATEGORIES = [
     id: 'villains',
     name: 'Villanos',
     words: [
-      'Darth Vader', 'Joker', 'Thanos', 'Voldemort', 'Sauron', 'Hannibal Lecter', 'Freddy Krueger', 'Jason Voorhees', 'Michael Myers', 'Pennywise',
-      'Drácula', 'Frankenstein', 'La Momia', 'El Hombre Lobo', 'Norman Bates', 'Jack Torrance', 'Agente Smith', 'T-1000', 'Palpatine', 'Kylo Ren',
-      'Loki', 'Duende Verde', 'Doctor Octopus', 'Venom', 'Magneto', 'Mistica', 'Apocalipsis', 'Lex Luthor', 'General Zod', 'Darkseid',
-      'Pingüino', 'Acertijo', 'Dos Caras', 'Bane', 'Espantapájaros', 'Harley Quinn', 'Hiedra Venenosa', 'Catwoman', 'Sr. Frío', 'Ra\'s al Ghul',
-      'Scar', 'Jafar', 'Úrsula', 'Maléfica', 'Cruella de Vil', 'Reina Malvada', 'Hades', 'Garfio', 'Gastón', 'Lady Tremaine',
-      'Bowser', 'Ganondorf', 'Sephiroth', 'Dr. Eggman', 'M. Bison', 'Shao Kahn', 'GLaDOS', 'Arthas', 'Diablo', 'Kefka',
-      'Walter White', 'Tony Soprano', 'Cersei Lannister', 'Joffrey Baratheon', 'Ramsay Bolton', 'Negan', 'Gus Fring', 'Pablo Escobar', 'El Chapo', 'Al Capone',
-      'Darth Maul', 'Barbanegra', 'Capitán Barbosa', 'Davy Jones', 'Saruman', 'Gollum', 'Smaug', 'Azog', 'Rey de la Noche', 'Grindelwald',
-      'Bill Cipher', 'Aku', 'Mojo Jojo', 'Plankton', 'Team Rocket', 'Freezer', 'Cell', 'Majin Buu', 'Orochimaru', 'Madara Uchiha'
+      'Darth Vader', 'Thanos', 'Loki', 'Joker', 'Duende Verde', 'Venom', 'Magneto', 'Ultron', 'Hela', 'Killmonger',
+      'Doctor Doom', 'Cráneo Rojo', 'Mysterio', 'El Buitre', 'Hombre de Arena', 'Electro', 'Abominación', 'Ronan', 'Ego', 'Dormammu',
+      'Maléfica', 'Jafar', 'Scar', 'Úrsula', 'Capitán Garfio', 'Hades', 'Cruella de Vil', 'Gaston', 'Reina Malvada', 'Lady Tremaine',
+      'Dr. Facilier', 'Reina de Corazones', 'Shan Yu', 'Clayton', 'Madre Gothel', 'Lotso', 'Sid', 'Síndrome', 'Emperador Zurg', 'Randall',
+      'Hopper', 'Auto (WALL-E)', 'Ernesto de la Cruz', 'Hans', 'Duke Weaselton', 'Tamatoa', 'Kingpin', 'Mandarin', 'Zemo', 'Kang',
+      'Galactus', 'Apocalipsis', 'Mistica', 'Dientes de Sable', 'Juggernaut', 'Gorr', 'Carnage', 'Kraven', 'Rhino', 'Lagarto',
+      'Shere Khan', 'Kaa', 'Príncipe Juan', 'Sheriff de Nottingham', 'Pete', 'Yzma', 'Ratigan', 'Frollo', 'Gantu', 'Bellwether'
     ]
   },
   {
     id: 'heroes',
     name: 'Héroes',
     words: [
-      'Superman', 'Batman', 'Wonder Woman', 'Spider-Man', 'Iron Man', 'Capitán América', 'Thor', 'Hulk', 'Black Widow', 'Hawkeye',
-      'Flash', 'Aquaman', 'Cyborg', 'Linterna Verde', 'Shazam', 'Supergirl', 'Batgirl', 'Robin', 'Nightwing', 'Green Arrow',
-      'Wolverine', 'Cíclope', 'Jean Grey', 'Tormenta', 'Bestia', 'Profesor X', 'Rogue', 'Gambito', 'Deadpool', 'Ant-Man',
-      'Doctor Strange', 'Black Panther', 'Capitana Marvel', 'Bruja Escarlata', 'Visión', 'Falcon', 'Soldado de Invierno', 'Star-Lord', 'Gamora', 'Drax',
-      'Rocket Raccoon', 'Groot', 'Luke Skywalker', 'Han Solo', 'Princesa Leia', 'Rey', 'Finn', 'Poe Dameron', 'Yoda', 'Obi-Wan Kenobi',
-      'Harry Potter', 'Hermione Granger', 'Ron Weasley', 'Frodo Bolsón', 'Aragorn', 'Legolas', 'Gimli', 'Samwise Gamgee', 'Gandalf', 'Bilbo Bolsón',
-      'Mickey Mouse', 'Hércules', 'Tarzán', 'Aladdín', 'Simba', 'Mulan', 'Pocahontas', 'Moana', 'Raya', 'Mirabel',
-      'Goku', 'Vegeta', 'Gohan', 'Naruto', 'Sasuke', 'Sakura', 'Kakashi', 'Luffy', 'Zoro', 'Sanji',
-      'Mario', 'Luigi', 'Link', 'Zelda', 'Samus Aran', 'Mega Man', 'Sonic', 'Donkey Kong', 'Crash Bandicoot', 'Spyro',
-      'Indiana Jones', 'James Bond', 'Neo', 'Terminator (T-800)', 'Ellen Ripley', 'Sarah Connor', 'Marty McFly', 'Katniss Everdeen', 'Sherlock Holmes', 'Zorro'
+      'Iron Man', 'Capitán América', 'Thor', 'Hulk', 'Viuda Negra', 'Ojo de Halcón', 'Hombre Araña', 'Pantera Negra', 'Doctor Strange', 'Ant-Man',
+      'Capitana Marvel', 'Bruja Escarlata', 'Visión', 'Falcon', 'Soldado del Invierno', 'Star-Lord', 'Gamora', 'Drax', 'Rocket Raccoon', 'Groot',
+      'Wolverine', 'Deadpool', 'Daredevil', 'Punisher', 'Jessica Jones', 'Luke Cage', 'Iron Fist', 'Caballero Luna', 'She-Hulk', 'Ms. Marvel',
+      'Mickey Mouse', 'Pato Donald', 'Goofy', 'Simba', 'Aladdín', 'Hércules', 'Tarzán', 'Mulan', 'Pocahontas', 'Ariel',
+      'Bella', 'Bestia', 'Cenicienta', 'Blancanieves', 'Aurora', 'Fiona', 'Rapunzel', 'Flynn Rider', 'Moana', 'Maui',
+      'Woody', 'Buzz Lightyear', 'Jessie', 'Mike Wazowski', 'Sulley', 'Nemo', 'Dory', 'Sr. Increíble', 'Elastigirl', 'Violeta',
+      'Dash', 'Jack-Jack', 'Rayo McQueen', 'Mate', 'Remy', 'WALL-E', 'EVA', 'Carl Fredricksen', 'Russell', 'Miguel (Coco)',
+      'Merida', 'Elsa', 'Anna', 'Kristoff', 'Olaf', 'Judy Hopps', 'Nick Wilde', 'Baymax', 'Ralph el Demoledor', 'Vanellope'
     ]
   },
   {
-    id: 'disney_movies',
-    name: 'Películas de Disney',
+    id: 'animated_movies',
+    name: 'Películas Animadas',
     words: [
-      'El Rey León', 'La Sirenita', 'La Bella y la Bestia', 'Aladdín', 'Mulan', 'Pocahontas', 'Hércules', 'Tarzán', 'El Jorobado de Notre Dame', 'Frozen',
-      'Enredados', 'Moana', 'Raya y el Último Dragón', 'Encanto', 'Blancanieves', 'Cenicienta', 'La Bella Durmiente', '101 Dálmatas', 'La Dama y el Vagabundo', 'Bambi',
-      'Dumbo', 'Pinocho', 'Peter Pan', 'Alicia en el País de las Maravillas', 'El Libro de la Selva', 'Robin Hood', 'Los Aristogatos', 'Winnie the Pooh', 'La Espada en la Piedra', 'Merlín el Encantador',
-      'Toy Story', 'Buscando a Nemo', 'Monsters Inc.', 'Los Increíbles', 'Cars', 'Ratatouille', 'WALL-E', 'Up', 'Inside Out', 'Coco',
-      'Soul', 'Luca', 'Red', 'Lightyear', 'Elementos', 'Turning Red', 'Valiente', 'Zootopia', 'Big Hero 6', 'Ralph el Demoledor',
-      'Mary Poppins', 'Piratas del Caribe', 'High School Musical', 'Camp Rock', 'Descendientes', 'Starstruck', 'Teen Beach Movie', 'Hannah Montana', 'Los Hechiceros de Waverly Place', 'Lizzie McGuire',
-      'Cruella', 'Maléfica', 'La Cenicienta (Live Action)', 'La Bella y la Bestia (Live Action)', 'El Libro de la Selva (Live Action)', 'El Rey León (Live Action)', 'Aladdín (Live Action)', 'Dumbo (Live Action)', 'Mulan (Live Action)', 'La Sirenita (Live Action)',
-      'Lilo y Stitch', 'El Planeta del Tesoro', 'Atlantis', 'Las Locuras del Emperador', 'Tierra de Osos', 'Vacas Vaqueras', 'Chicken Little', 'La Familia del Futuro', 'Bolt', 'La Princesa y el Sapo',
-      'Fantasía', 'Tron', 'Hocus Pocus', 'Abracadabra', 'Juego de Gemelas', 'Un Viernes de Locos', 'Herbie', 'Querida, Encogí a los Niños', 'George de la Selva', 'Flubber'
+      'El Rey León', 'Shrek', 'Toy Story', 'Buscando a Nemo', 'La Era de Hielo', 'Madagascar', 'Kung Fu Panda', 'Gru, Mi Villano Favorito', 'Minions', 'Intensamente',
+      'Coco', 'Frozen', 'Los Increíbles', 'Monsters Inc.', 'Cars', 'Ratatouille', 'Up', 'WALL-E', 'Cómo Entrenar a tu Dragón', 'El Gato con Botas',
+      'Sing', 'La Vida Secreta de tus Mascotas', 'Hotel Transylvania', 'Spider-Man: Un Nuevo Universo', 'Super Mario Bros. La Película', 'Encanto', 'Moana', 'Zootopia', 'Enredados', 'Valiente',
+      'Aladdín', 'La Sirenita', 'La Bella y la Bestia', 'Mulan', 'Pocahontas', 'Hércules', 'Tarzán', 'El Jorobado de Notre Dame', 'Lilo y Stitch', 'El Planeta del Tesoro',
+      'Spirit', 'El Camino hacia El Dorado', 'Simbad', 'El Príncipe de Egipto', 'Pollitos en Fuga', 'Wallace y Gromit', 'Megamente', 'El Origen de los Guardianes', 'Los Croods', 'Trolls',
+      'Rio', 'Ferdinand', 'Robots', 'Horton y el Mundo de los Quien', 'Lorax', 'El Grinch', 'Bob Esponja: La Película', 'Los Simpson: La Película', 'Lluvia de Hamburguesas', 'Rango',
+      'Klaus', 'Red', 'Soul', 'Luca', 'Lightyear', 'Elementos', 'Un Gran Dinosaurio', 'Unidos', 'Wifi Ralph', 'Grandes Héroes',
+      'Bolt', 'La Familia del Futuro', 'Chicken Little', 'Tierra de Osos', 'Vacas Vaqueras', 'Atlantis', 'Las Locuras del Emperador', 'Dinosaurio', 'Fantasía', 'Pinocho',
+      'Dumbo', 'Bambi', 'Peter Pan', 'Alicia en el País de las Maravillas', 'La Dama y el Vagabundo', '101 Dálmatas', 'El Libro de la Selva', 'Los Aristogatos', 'Robin Hood', 'Winnie the Pooh'
+    ]
+  },
+  {
+    id: 'cartoons',
+    name: 'Dibujos Animados',
+    words: [
+      'Los Simpson', 'Dragon Ball Z', 'Tom y Jerry', 'Bob Esponja', 'Scooby Doo', 'Los Picapiedra', 'El Chavo Animado', 'Hora de Aventura', 'Un Show Más', 'Gumball',
+      'Gravity Falls', 'Phineas y Ferb', 'Coraje el Perro Cobarde', 'Las Chicas Superpoderosas', 'El Laboratorio de Dexter', 'Johnny Bravo', 'Ed, Edd y Eddy', 'Los Padrinos Mágicos', 'Ben 10', 'Pokémon',
+      'Naruto', 'Los Caballeros del Zodiaco', 'Supercampeones', 'He-Man', 'Thundercats', 'Rugrats', 'Hey Arnold!', 'Bob el Constructor', 'Peppa Pig', 'Paw Patrol',
+      'Bluey', 'Mickey Mouse', 'Pato Donald', 'Looney Tunes', 'La Pantera Rosa', 'Inspector Gadget', 'Las Tortugas Ninja', 'Garfield', 'Popeye', 'Los Supersónicos',
+      'Los Pitufos', 'Heidi', 'Marco', 'Mazinger Z', 'Robotech', 'Sailor Moon', 'Ranma 1/2', 'Digimon', 'Yu-Gi-Oh!', 'Avatar: La Leyenda de Aang',
+      'Rick y Morty', 'South Park', 'Futurama', 'Padre de Familia', 'Dora la Exploradora', 'Winnie Pooh', 'Jorge el Curioso', 'Clifford', 'Caillou', 'Backyardigans',
+      'Pucca', 'KND: Los Chicos del Barrio', 'Mansión Foster', 'Billy y Mandy', 'Coraje', 'Samurai Jack', 'Danny Phantom', 'Jimmy Neutrón', 'Invasor Zim', 'Avatar'
+    ]
+  },
+  {
+    id: 'series',
+    name: 'Series',
+    words: [
+      'Breaking Bad', 'Game of Thrones', 'Friends', 'The Office', 'Stranger Things', 'Dark', 'Black Mirror', 'La Casa de Papel', 'El Juego del Calamar', 'Los Simuladores',
+      'Casados con Hijos', 'El Marginal', 'Okupas', 'Vientos de Agua', 'Merlí', 'Élite', 'Vis a Vis', 'The Walking Dead', 'Lost', 'Grey\'s Anatomy',
+      'Dr. House', 'The Big Bang Theory', 'How I Met Your Mother', 'Modern Family', 'Peaky Blinders', 'Vikings', 'Chernobyl', 'Sherlock', 'The Crown', 'Bridgerton',
+      'Gossip Girl', 'Gilmore Girls', 'Sex and the City', 'Suits', 'Better Call Saul', 'Narcos', 'El Patrón del Mal', 'Betty la Fea', 'Pasión de Gavilanes', 'Rebelde Way',
+      'Chiquititas', 'Floricienta', 'Casi Ángeles', 'Violetta', 'Soy Luna', 'Esperanza Mía', 'Patito Feo', 'Moni Argento', 'Pepe Argento', 'Sandro',
+      'El Encargado', 'División Palermo', 'El Reino', 'Santa Evita', 'Maradona: Sueño Bendito', 'Luis Miguel: La Serie', 'Cobra Kai', 'The Mandalorian', 'The Boys', 'Succession',
+      'Euphoria', 'The Last of Us', 'Wednesday', 'Dahmer', 'Ozark', 'Mindhunter', 'True Detective', 'Fargo', 'Sons of Anarchy', 'Mad Men'
     ]
   }
 ];

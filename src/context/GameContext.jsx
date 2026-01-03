@@ -67,6 +67,13 @@ export const GameProvider = ({ children }) => {
         setStartingPlayer(null);
     }
 
+    const randomizeStartingPlayer = () => {
+        if (players.length > 0) {
+            const randomStart = players[Math.floor(Math.random() * players.length)];
+            setStartingPlayer(randomStart);
+        }
+    };
+
     return (
         <GameContext.Provider value={{
             players,
@@ -82,7 +89,8 @@ export const GameProvider = ({ children }) => {
             assignRoles,
             startingPlayer,
             resetGame,
-            playAgain
+            playAgain,
+            randomizeStartingPlayer
         }}>
             {children}
         </GameContext.Provider>

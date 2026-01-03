@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useGame } from '../context/GameContext';
+import { RefreshCw } from 'lucide-react';
 
 const GameSession = () => {
     const navigate = useNavigate();
-    const { startingPlayer } = useGame();
+    const { startingPlayer, randomizeStartingPlayer } = useGame();
 
     if (!startingPlayer) return <div>Cargando...</div>;
 
@@ -23,9 +24,25 @@ const GameSession = () => {
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
                 className="glass-panel"
-                style={{ padding: '2rem 3rem', marginBottom: '4rem', background: 'rgba(255, 255, 255, 0.1)', borderColor: 'var(--primary-glow)' }}
+                style={{ padding: '2rem 3rem', marginBottom: '4rem', background: 'rgba(255, 255, 255, 0.1)', borderColor: 'var(--primary-glow)', position: 'relative' }}
             >
                 <h1 style={{ margin: 0, fontSize: '2.5rem', color: 'var(--primary-glow)' }}>{startingPlayer.name}</h1>
+                <button
+                    onClick={randomizeStartingPlayer}
+                    style={{
+                        position: 'absolute',
+                        top: '10px',
+                        right: '10px',
+                        background: 'transparent',
+                        border: 'none',
+                        color: 'var(--text-muted)',
+                        cursor: 'pointer',
+                        padding: '5px'
+                    }}
+                    title="Elegir otro jugador"
+                >
+                    <RefreshCw size={20} />
+                </button>
             </motion.div>
 
             <div style={{ width: '100%', maxWidth: '400px' }}>
@@ -36,7 +53,7 @@ const GameSession = () => {
                 <button
                     className="btn-primary"
                     onClick={() => navigate('/results')}
-                    style={{ background: 'linear-gradient(135deg, var(--secondary) 0%, #be185d 100%)' }} // More reddish for "Reveal"
+                    style={{ background: 'linear-gradient(135deg, var(--secondary) 0%, #be185d 100%)' }}
                 >
                     Revelar al Impostor
                 </button>
