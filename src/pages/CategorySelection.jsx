@@ -42,6 +42,43 @@ const CategorySelection = () => {
             </header>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', overflowY: 'auto', paddingBottom: '2rem' }}>
+                {/* Random Category Button */}
+                <motion.button
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => {
+                        const randomCategory = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+                        handleSelectCategory(randomCategory);
+                    }}
+                    style={{
+                        background: 'var(--bg-card)',
+                        border: '2px dashed var(--primary-glow)',
+                        borderRadius: '1rem',
+                        padding: '1.5rem 1rem',
+                        textAlign: 'left',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        minHeight: '140px',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        gridColumn: '1 / -1' // Span full width
+                    }}
+                >
+                    <div style={{
+                        position: 'absolute',
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+                        zIndex: 0
+                    }} />
+                    <div style={{ zIndex: 1, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', flexDirection: 'column' }}>
+                        <span style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎲</span>
+                        <h3 style={{ fontSize: '1.2rem', marginBottom: '0', color: 'var(--primary-glow)', textAlign: 'center' }}>Aleatorio</h3>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Cualquier categoría</span>
+                    </div>
+                </motion.button>
+
                 {CATEGORIES.map((cat, index) => (
                     <motion.button
                         key={cat.id}

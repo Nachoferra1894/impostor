@@ -118,10 +118,10 @@ export const CATEGORIES = [
       'Mercedes-Benz', 'Audi', 'Volkswagen', 'Ferrari', 'Lamborghini', 'Porsche', 'Tesla', 'Sony', 'Nintendo', 'PlayStation',
       'Xbox', 'Netflix', 'Spotify', 'Disney', 'Warner Bros', 'Universal', 'Marvel', 'DC', 'Lego', 'Barbie',
       'IKEA', 'H&M', 'Zara', 'Gucci', 'Louis Vuitton', 'Chanel', 'Prada', 'Rolex', 'Tiffany & Co.', 'Cartier',
-      'Visa', 'Mastercard', 'American Express', 'PayPal', 'Uber', 'Airbnb', 'Booking.com', 'Expedia', 'TripAdvisor', 'Yelp',
+      'Visa', 'Mastercard', 'American Express', 'PayPal', 'Uber', 'Airbnb', 'Booking.com', 'Expedia', 'TripAdvisor', 'PedidosYa',
       'Twitter', 'Instagram', 'TikTok', 'Snapchat', 'LinkedIn', 'YouTube', 'Twitch', 'Zoom', 'Slack', 'Discord',
       'Starbucks', 'Nespresso', 'Red Bull', 'Monster', 'Gatorade', 'Lays', 'Pringles', 'Doritos', 'Oreo', 'KitKat',
-      'M&M\'s', 'Snickers', 'Mars', 'Hershey\'s', 'Ferrero Rocher', 'Nutella', 'Kinder', 'Danone', 'Nestlé', 'Kellogg\'s'
+      'M&M\'s', 'Snickers', 'Milka', 'Arcor', 'Ferrero Rocher', 'Nutella', 'Kinder', 'Danone', 'Nestlé', 'Bimbo'
     ]
   },
   {
